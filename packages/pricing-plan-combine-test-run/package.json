@@ -1,0 +1,78 @@
+{
+  "name": "@wix/pricing-plan-combine-test-run",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "author": {
+    "name": "AlonPere",
+    "email": "AlonPere@wix.com"
+  },
+  "scripts": {
+    "start": "yoshi-flow-editor start",
+    "build": "yoshi-flow-editor build && yarn storybook:build",
+    "lint": "yoshi-flow-editor lint",
+    "test": "yarn test:unit && yarn test:sled",
+    "test:sled": "sled-test-runner remote",
+    "test:sled:local": "sled-test-runner local",
+    "test:unit": "yoshi-flow-editor test",
+    "storybook:start": "yoshi-flow-editor storybook start",
+    "storybook:build": "yoshi-flow-editor storybook build",
+    "storybook:deploy": "janet deploy --ci",
+    "add": "yoshi-flow-editor add"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "yarn lint --fix"
+  },
+  "jest": {
+    "preset": "@wix/yoshi-flow-editor"
+  },
+  "dependencies": {
+    "@wix/tpa-settings": "^2.2.11",
+    "@wix/wix-base-ui": "^4.6.0",
+    "react": "~16.13.0",
+    "react-dom": "~16.13.0",
+    "wix-ui-tpa": "^3.4.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@types/jest": "^27.4.0",
+    "@types/react": "^16.9.15",
+    "@types/react-dom": "^16.9.5",
+    "@wix/janet": "^1.0.120",
+    "@wix/perfer-sled": "^1.0.0",
+    "@wix/perfer-viewer-utils": "^1.0.0",
+    "@wix/sled-test-runner": "^2.0.0",
+    "@wix/yoshi-flow-editor": "^6.0.0",
+    "@wix/yoshi-storybook-dependencies": "^6.0.0",
+    "lodash": "^4.17.11",
+    "typescript": "~4.6.0"
+  },
+  "perfer": {
+    "preset": "@wix/yoshi-flow-editor/perfer-preset"
+  },
+  "wix": {
+    "artifact": {
+      "groupId": "com.wixpress",
+      "artifactId": "pricing-plan-combine-test-run",
+      "targets": {
+        "static": true
+      }
+    },
+    "validations": {
+      "source": [
+        "lint"
+      ],
+      "postDependenciesBuild": [
+        "test:unit"
+      ],
+      "postBuild": [
+        "storybook:deploy",
+        "test:sled"
+      ]
+    }
+  },
+  "wallaby": {
+    "autoDetect": true
+  }
+}

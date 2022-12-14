@@ -1,0 +1,11 @@
+{
+  "appDefinitionId": "d8ad0614-fdc6-412e-a477-c666e4a10bb9",
+  "appName": "pricing-plan-combine-test-run",
+  "sled": {
+    "testUserEmail": "wixqatest.yoshi@gmail.com"
+  },
+ "experiments": {
+    "scopes": ["test"],
+    "centralized": true
+  }
+}

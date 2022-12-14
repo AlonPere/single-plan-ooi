@@ -1,0 +1,6 @@
+{
+  "name": "pricing-plan-combine-test-run-storybook",
+  "rootDir": "storybook-static",
+  "files": ["*"],
+  "exposure": ["bo"]
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "app_name": "pricing-plan-combine-test-run",
+    "app_id": "d8ad0614-fdc6-412e-a477-c666e4a10bb9",
+    "deploy_annotations": [
+      "pricing-plan-combine-test-run",
+      "wix-thunderbolt"
+    ],
+    "ignore_first_request_roundtrip": true,
+    "petri_annotations": {
+      "scopes": [
+        "client-spec-map",
+        "viewer-apps-d8ad0614-fdc6-412e-a477-c666e4a10bb9"
+      ]
+    },
+    "notifications": {
+      "slack_channels": [
+        "pricing-plan-combine-test-run-urgent"
+      ]
+    }
+  },
+  {
+    "app_name": "pricing-plan-combine-test-run-Multiplan",
+    "app_id": "d8ad0614-fdc6-412e-a477-c666e4a10bb9",
+    "widget_id": "070d55a1-a3bf-4780-9ebe-102f128b0340",
+    "deploy_annotations": [
+      "pricing-plan-combine-test-run",
+      "wix-thunderbolt"
+    ],
+    "ignore_first_request_roundtrip": true,
+    "petri_annotations": {
+      "scopes": [
+        "client-spec-map",
+        "viewer-apps-d8ad0614-fdc6-412e-a477-c666e4a10bb9"
+      ]
+    },
+    "notifications": {
+      "slack_channels": [
+        "pricing-plan-combine-test-run-urgent"
+      ]
+    }
+  }
+]

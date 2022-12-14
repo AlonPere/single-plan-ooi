@@ -1,0 +1,17 @@
+{
+  "artifact_id": "pricing-plan-combine-test-run",
+  "artifacts_upload": {
+    "patterns": [
+      "**/*.json",
+      "**/*.min.js",
+      "**/*.min.css",
+      "**/base-ui.css",
+      "**/*.stylable.bundle.css",
+      "**/*.stylable.bundle.rtl.css"
+    ]
+  },
+  "wait_for_archive_extraction": true,
+  "bundle_tests": true,
+  "experimental_fast_test_bundler": true,
+  "sled_folder_relative_path_in_repo": "sled"
+}
